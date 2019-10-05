@@ -44,6 +44,12 @@ a:hover {
   transition-duration: 0.5s;
 }
 
+.image-container {
+  width: 100%;
+  margin: 1em
+}
+
 .logo {
-  width: 35em;
+  width: 55em;
+  max-width: 90%
 }
