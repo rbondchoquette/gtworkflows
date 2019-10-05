@@ -1,0 +1,32 @@
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='/stylesheets/style-dashboard.css')
+  body
+    block content
+    img(src='/images/small_logo.png' class='logo')
+    h1(class="text-center") Available Associates
+    table.center-block
+        tr
+            th NAME 
+            th EMAIL
+            th CAPACITY 
+            th SHAREHOLDER 
+        each associate in associate_list
+            tr 
+                td
+                    != associate.name
+                td
+                    a(href=`mailto:` associate.email) SEND EMAIL
+
+                td
+                    != associate.capacity 
+                td    
+                    != associate.shareholder
+        else
+            li There are no associates.

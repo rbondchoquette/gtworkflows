@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='/stylesheets/style-form.css')
+  body
+    block content
+    img(src='/images/small_logo.png' class='small-logo')
+    
+    h1(class="text-center") Associate Workflow
+
+    form.center-block(method='POST' action='')
+        div.form-group
+            label(for='name') NAME:
+            input#name.form-control(type='text' placeholder='NAME' name='name' required='true' value=(undefined===associate ? '' : associate.name) )
+            
+        div.form-group
+            label(for='email') EMAIL:
+            input#name.form-control(type='email' placeholder='GT ADDRESS' name='email' required='true' value=(undefined===associate ? '' : associate.email) )
+
+        div.form-group
+            label(for='capacity') CAPACITY:
+            select#capacity.form-control(name='capacity' required='true')
+                option='LOW'
+                option='MEDIUM'
+                option='MAX'
+            
+        div.form-group
+            label(for='shareholder') PRIMARY SHAREHOLDER:
+            input#shareholder.form-control(type='text' placeholder='SHAREHOLDER' name='shareholder' required='true' value=(undefined===associate ? '' : associate.shareholder) )
+            
+        button.center-block(type='submit' class="button") SUBMIT
+    if errors 
+        ul
+        for error in errors
+            li!= error.msg
