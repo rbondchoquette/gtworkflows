@@ -35,6 +35,7 @@ form {
 }
 
 .small-logo {
-    width: 10em !important;
-    margin: 1em !important
+    width: 10em;
+    max-width: 15%;
+    margin: 1em
 }
