@@ -9,13 +9,14 @@
   background-color: rgb(45, 45, 45);
   padding-top: 25%;
   padding-bottom: 25%;
-  border: .25em solid black
+  border: .25em solid black;
 }
 
 body {
   background-color: rgb(190, 155, 57);
   font-size: 1.5em;
   font-family: 'PT Sans', sans-serif;
+  text-align: center
 }
 
 a {
@@ -29,9 +30,11 @@ a:hover {
 .button {
   background-color: rgb(0, 0, 0);
   border: none;
-  padding: 3em;
+  width: 15em;
+  height: 10em;
   font-size: 2em;
-  font-family: 'PT Sans', sans-serif
+  font-family: 'PT Sans', sans-serif;
+  max-width: 100%;
 }
 
 .button:hover {
@@ -44,12 +47,7 @@ a:hover {
   transition-duration: 0.5s;
 }
 
-.image-container {
-  width: 100%;
-  margin: 1em
-}
-
 .logo {
   width: 55em;
-  max-width: 100%
+  max-width: 80%
 }
