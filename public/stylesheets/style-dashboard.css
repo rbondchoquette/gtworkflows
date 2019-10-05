@@ -4,33 +4,34 @@ body {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 4vw;
     font-family: 'PT Serif', serif;
     font-weight: bold;
-
 }
 
 table {
     border: 1px solid rgb(190, 155, 57);
     margin: 1em;
-    font-size: 2em;
-    font-family: 'PT Sans', sans-serif
+    font-size: 2vw;
+    font-family: 'PT Sans', sans-serif;
+    max-width: 95%
 }
 
 th {
-    padding: 1em;
+    padding: .75em;
 }
 
 td {
-    padding: 1em;
+    padding: .75em;
+    max-width: 20%
 }
 
 a {
     color: rgb(147, 211, 241);
   }
 
-.small-logo {
-    width: 10em;
-    max-width: 15%;
-    margin: 1em
+.logo {
+    width: 10em !important;
+    max-width: 15% !important;
+    margin: 1em !important
 }
