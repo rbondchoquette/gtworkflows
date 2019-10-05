@@ -50,5 +50,8 @@ a:hover {
 .logo {
   width: 55em;
   max-width: 80%;
-  margin: 0.25em
+}
+
+.container-fluid {
+  margin: .5em
 }
